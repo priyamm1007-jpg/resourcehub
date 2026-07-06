@@ -8,7 +8,7 @@ import Hero from "../components/Hero";
 import ResourceCard from "../components/ResourceCard";
 
 export default function Home() {
-
+const [selectedCategory, setSelectedCategory] = useState("All");
   const [resources, setResources] = useState([]);
   const [search, setSearch] = useState("");
 
