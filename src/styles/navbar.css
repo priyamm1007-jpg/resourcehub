@@ -167,3 +167,32 @@ background:#EF4444;
 transform:translateY(-2px);
 
 }
+
+.left img{
+
+transition:
+transform .35s ease;
+
+}
+
+.left:hover img{
+
+transform:
+rotate(-6deg)
+scale(1.08);
+
+}
+
+.insta{
+
+transition:
+.3s;
+
+}
+
+.insta:hover{
+
+transform:
+translateY(-2px);
+
+}
