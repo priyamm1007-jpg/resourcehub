@@ -1,59 +1,62 @@
 import "../styles/card.css";
+import { motion } from "framer-motion";
+
 export default function ResourceCard({
   title,
   description,
   category,
   website,
   reel,
-  free
+  thumbnail
 }) {
   return (
-    <div className="resourceCard">
+    <motion.article
+      className="resourceCard"
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.45 }}
+      whileHover={{ y: -8 }}
+    >
 
-      <div className="cardHeader">
+      {thumbnail && (
+        <img
+          src={thumbnail}
+          alt={title}
+          className="cardThumbnail"
+        />
+      )}
 
-        <div>
+      <span className="categoryBadge">
+        {category.toUpperCase()}
+      </span>
 
-          <span className="categoryBadge">
-            {category}
-          </span>
+      <h3>{title}</h3>
 
-          <h3>{title}</h3>
-
-          <p>{description}</p>
-
-        </div>
-
-        {free && (
-          <span className="freeBadge">
-            FREE
-          </span>
-        )}
-
-      </div>
+      <p>{description}</p>
 
       <div className="cardButtons">
 
         <a
-  href={website}
-  target="_blank"
-  rel="noreferrer"
-  className="primaryBtn"
->
-  ↗ Open
-</a>
+          href={website}
+          target="_blank"
+          rel="noreferrer"
+          className="primaryBtn"
+        >
+          Visit Site ↗
+        </a>
 
-<a
-  href={reel}
-  target="_blank"
-  rel="noreferrer"
-  className="secondaryBtn"
->
-  ▶ Reel
-</a>
+        <a
+          href={reel}
+          target="_blank"
+          rel="noreferrer"
+          className="secondaryBtn"
+        >
+          Watch Reel →
+        </a>
 
       </div>
 
-    </div>
+    </motion.article>
   );
 }
