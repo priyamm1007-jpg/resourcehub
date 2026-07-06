@@ -169,4 +169,110 @@ font-size:21px;
 
 }
 
+/* ---------- Premium Hover ---------- */
+
+.resourceCard{
+
+transition:
+transform .35s cubic-bezier(.2,.8,.2,1),
+border-color .35s,
+box-shadow .35s;
+
+cursor:pointer;
+
+}
+
+.resourceCard:hover{
+
+transform:
+translateY(-8px);
+
+border-color:#313136;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.45);
+
+}
+
+/* ---------- Buttons ---------- */
+
+.primaryBtn,
+.secondaryBtn{
+
+transition:
+transform .25s,
+background .25s,
+border-color .25s,
+color .25s;
+
+}
+
+.primaryBtn:hover{
+
+transform:translateY(-2px);
+
+}
+
+.secondaryBtn:hover{
+
+transform:translateY(-2px);
+
+}
+
+/* ---------- Arrow Animation ---------- */
+
+.primaryBtn::after{
+
+content:"↗";
+
+display:inline-block;
+
+margin-left:8px;
+
+transition:transform .25s;
+
+}
+
+.primaryBtn:hover::after{
+
+transform:
+translateX(4px)
+translateY(-2px);
+
+}
+
+.secondaryBtn::after{
+
+content:"→";
+
+display:inline-block;
+
+margin-left:8px;
+
+transition:transform .25s;
+
+}
+
+.secondaryBtn:hover::after{
+
+transform:translateX(5px);
+
+}
+
+/* ---------- Image Zoom ---------- */
+
+.cardThumbnail{
+
+transition:
+transform .5s ease;
+
+}
+
+.resourceCard:hover
+.cardThumbnail{
+
+transform:scale(1.05);
+
+}
+
 }
