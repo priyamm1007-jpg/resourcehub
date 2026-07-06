@@ -1,0 +1,39 @@
+.sectionHeader{
+  margin-bottom:40px;
+}
+
+.sectionTag{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 14px;
+  border:1px solid #27272A;
+  border-radius:999px;
+  background:#111111;
+  color:#DC2626;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:16px;
+}
+
+.sectionTitle{
+  font-size:34px;
+  font-weight:800;
+  color:#FAFAFA;
+  margin-bottom:10px;
+  letter-spacing:-1px;
+}
+
+.sectionSubtitle{
+  color:#A1A1AA;
+  font-size:16px;
+  line-height:1.7;
+  max-width:550px;
+}
+
+.resourceWrapper{
+  width:90%;
+  max-width:900px;
+  margin:60px auto;
+}
