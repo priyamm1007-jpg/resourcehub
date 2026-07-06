@@ -43,7 +43,7 @@ export default function ResourceCard({
           rel="noreferrer"
           className="primaryBtn"
         >
-          Visit Site ↗
+          OPEN RESOURCE
         </a>
 
         <a
