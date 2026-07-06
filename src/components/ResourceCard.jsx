@@ -35,22 +35,22 @@ export default function ResourceCard({
       <div className="cardButtons">
 
         <a
-          href={website}
-          target="_blank"
-          rel="noreferrer"
-          className="primaryBtn"
-        >
-          ↗ Open
-        </a>
+  href={website}
+  target="_blank"
+  rel="noreferrer"
+  className="primaryBtn"
+>
+  ↗ Open
+</a>
 
-        <a
-          href={reel}
-          target="_blank"
-          rel="noreferrer"
-          className="secondaryBtn"
-        >
-          ▶ Reel
-        </a>
+<a
+  href={reel}
+  target="_blank"
+  rel="noreferrer"
+  className="secondaryBtn"
+>
+  ▶ Reel
+</a>
 
       </div>
 
