@@ -1,39 +1,174 @@
+.resourceWrapper{
+
+max-width:1200px;
+
+margin:90px auto;
+
+padding:0 22px;
+
+}
+
 .sectionHeader{
-  margin-bottom:40px;
+
+margin-bottom:50px;
+
 }
 
 .sectionTag{
-  display:inline-flex;
-  align-items:center;
-  padding:8px 14px;
-  border:1px solid #27272A;
-  border-radius:999px;
-  background:#111111;
-  color:#DC2626;
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin-bottom:16px;
+
+display:inline-flex;
+
+padding:7px 16px;
+
+border-radius:999px;
+
+background:#141418;
+
+border:1px solid #252529;
+
+font-size:11px;
+
+font-weight:700;
+
+letter-spacing:1.5px;
+
+color:#A1A1AA;
+
+text-transform:uppercase;
+
+margin-bottom:18px;
+
 }
 
 .sectionTitle{
-  font-size:34px;
-  font-weight:800;
-  color:#FAFAFA;
-  margin-bottom:10px;
-  letter-spacing:-1px;
+
+font-size:42px;
+
+font-weight:800;
+
+letter-spacing:-1.5px;
+
+color:white;
+
+margin-top:18px;
+
+margin-bottom:12px;
+
 }
 
 .sectionSubtitle{
-  color:#A1A1AA;
-  font-size:16px;
-  line-height:1.7;
-  max-width:550px;
+
+font-size:18px;
+
+color:#8F8F95;
+
+line-height:1.8;
+
+max-width:620px;
+
 }
 
+/* GRID */
+
+.resourceGrid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(340px,1fr));
+
+gap:26px;
+
+align-items:start;
+
+}
+
+/* Empty State */
+
+.emptyState{
+
+padding:100px 20px;
+
+text-align:center;
+
+border:1px dashed #2A2A2E;
+
+border-radius:24px;
+
+background:#111114;
+
+}
+
+.emptyState h2{
+
+color:white;
+
+font-size:30px;
+
+margin-bottom:10px;
+
+}
+
+.emptyState p{
+
+color:#8F8F95;
+
+font-size:16px;
+
+}
+
+/* smooth fade */
+
+.resourceGrid>*{
+
+animation:fadeUp .45s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+@media(max-width:768px){
+
 .resourceWrapper{
-  width:90%;
-  max-width:900px;
-  margin:60px auto;
+
+margin-top:65px;
+
+}
+
+.sectionTitle{
+
+font-size:34px;
+
+}
+
+.sectionSubtitle{
+
+font-size:16px;
+
+}
+
+.resourceGrid{
+
+grid-template-columns:1fr;
+
+}
+
 }
