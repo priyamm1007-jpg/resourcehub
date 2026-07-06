@@ -158,17 +158,19 @@ backdrop-filter:blur(20px);
 
 .suggestion{
 
-padding:16px 20px;
+padding:18px 22px;
 
 cursor:pointer;
 
-display:flex;
+transition:.25s;
 
-justify-content:space-between;
+border-bottom:1px solid #1E1E22;
 
-align-items:center;
+}
 
-transition:.2s;
+.suggestion:last-child{
+
+border:none;
 
 }
 
@@ -178,53 +180,41 @@ background:#19191D;
 
 }
 
-.suggestion span{
+.suggestion small{
 
-font-size:12px;
+display:inline-block;
+
+margin-bottom:8px;
+
+font-size:11px;
 
 letter-spacing:1px;
 
-color:#A1A1AA;
+color:#8F8F95;
 
 text-transform:uppercase;
 
 }
 
-.suggestion strong{
+.suggestion h4{
 
-font-size:15px;
+font-size:16px;
 
 font-weight:600;
 
 color:white;
 
-}
-
-@media(max-width:768px){
-
-.hero{
-
-margin-top:60px;
+margin-bottom:6px;
 
 }
 
-.hero h1{
+.suggestion p{
 
-font-size:42px;
+font-size:14px;
 
-letter-spacing:-2px;
+line-height:1.5;
 
-}
-
-.hero p{
-
-font-size:16px;
-
-}
-
-.search{
-
-height:58px;
+color:#8F8F95;
 
 }
 
