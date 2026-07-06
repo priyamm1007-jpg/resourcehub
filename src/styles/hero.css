@@ -108,7 +108,8 @@ color:white;
 
 outline:none;
 
-transition:.3s;
+transition:
+.35s ease;
 
 }
 
@@ -116,7 +117,10 @@ transition:.3s;
 
 border-color:#DC2626;
 
-box-shadow:0 0 0 4px rgba(220,38,38,.12);
+box-shadow:
+0 0 0 4px rgba(220,38,38,.10);
+
+transform:translateY(-2px);
 
 }
 
