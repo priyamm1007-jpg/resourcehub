@@ -25,15 +25,16 @@ export default function Home() {
         const rows = json.table.rows;
 
         const formattedData = rows.map((row) => ({
-          id: row.c[0]?.v || "",
-          title: row.c[1]?.v || "",
-          description: row.c[2]?.v || "",
-          category: row.c[3]?.v || "",
-          website: row.c[4]?.v || "",
-          reel: row.c[5]?.v || "",
-          thumbnail: row.c[6]?.v || "",
-          featured: row.c[7]?.v || false,
-        }));
+  id: row.c[0]?.v || "",
+  title: row.c[1]?.v || "",
+  description: row.c[2]?.v || "",
+  category: row.c[3]?.v || "",
+  website: row.c[4]?.v || "",
+  reel: row.c[5]?.v || "",
+  thumbnail: row.c[6]?.v || "",
+  featured: row.c[7]?.v || false,
+  visibility: row.c[8]?.v || "",
+}));
 
         setResources(formattedData);
 
