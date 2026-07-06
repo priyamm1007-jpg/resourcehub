@@ -1,149 +1,172 @@
 .resourceCard{
-    background:#111111;
-    border:1px solid #222;
-    border-radius:20px;
 
-    padding:28px;
+    background:#111114;
 
-    margin-bottom:24px;
+    border:1px solid #232326;
 
-    transition:.25s;
+    border-radius:26px;
+
+    padding:22px;
+
+    transition:.35s ease;
+
+    overflow:hidden;
 
     display:flex;
+
     flex-direction:column;
-    gap:22px;
+
+    gap:18px;
+
 }
 
 .resourceCard:hover{
 
-    transform:translateY(-6px);
+    border-color:#35353A;
 
-    border-color:#ff2d2d;
-
-    box-shadow:0 0 35px rgba(255,45,45,.18);
-
-}
-
-.cardHeader{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:flex-start;
-
-    gap:20px;
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.45);
 
 }
 
-.cardHeader h3{
+.cardThumbnail{
 
-    color:white;
+    width:100%;
 
-    font-size:34px;
+    aspect-ratio:16/9;
 
-    margin:14px 0 10px;
+    object-fit:cover;
 
-}
+    border-radius:18px;
 
-.cardHeader p{
-
-    color:#9f9f9f;
-
-    line-height:1.7;
-
-    font-size:17px;
+    margin-bottom:5px;
 
 }
 
 .categoryBadge{
 
-    background:#1b1b1b;
+    width:max-content;
 
-    color:#ff4040;
-
-    padding:8px 18px;
+    padding:6px 12px;
 
     border-radius:999px;
 
-    font-size:14px;
+    border:1px solid #2A2A2F;
 
-    font-weight:600;
+    background:#18181B;
+
+    color:#A1A1AA;
+
+    font-size:11px;
+
+    letter-spacing:1.2px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
 
 }
 
-.freeBadge{
-
-    background:#ff2d2d;
+.resourceCard h3{
 
     color:white;
 
-    padding:10px 18px;
+    font-size:24px;
 
-    border-radius:999px;
+    line-height:1.25;
 
-    font-weight:bold;
+    font-weight:700;
+
+}
+
+.resourceCard p{
+
+    color:#A1A1AA;
+
+    line-height:1.7;
+
+    font-size:15px;
 
 }
 
 .cardButtons{
 
+    margin-top:auto;
+
     display:flex;
 
-    gap:16px;
+    gap:12px;
+
+}
+
+.cardButtons a{
+
+    flex:1;
+
+    text-align:center;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.25s;
 
 }
 
 .primaryBtn{
 
-    flex:1;
-
-    text-align:center;
-
-    text-decoration:none;
-
-    background:#ff2d2d;
+    background:#DC2626;
 
     color:white;
-
-    padding:16px;
-
-    border-radius:14px;
-
-    font-weight:700;
-
-    transition:.2s;
 
 }
 
 .primaryBtn:hover{
 
-    background:#ff4d4d;
+    transform:translateY(-2px);
+
+    background:#EF4444;
 
 }
 
 .secondaryBtn{
 
-    flex:1;
+    border:1px solid #2A2A2F;
 
-    text-align:center;
-
-    text-decoration:none;
-
-    border:1px solid #333;
-
-    color:white;
-
-    padding:16px;
-
-    border-radius:14px;
-
-    transition:.2s;
+    color:#E4E4E7;
 
 }
 
 .secondaryBtn:hover{
 
-    border-color:#ff2d2d;
+    background:#1C1C20;
+
+    transform:translateY(-2px);
+
+}
+
+@media(max-width:768px){
+
+.cardButtons{
+
+flex-direction:column;
+
+}
+
+.resourceCard{
+
+padding:18px;
+
+}
+
+.resourceCard h3{
+
+font-size:21px;
+
+}
 
 }
