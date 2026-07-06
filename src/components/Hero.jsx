@@ -94,39 +94,35 @@ export default function Hero({
 
         <div className="suggestions">
 
-          {
+  {suggestions.map((item) => (
 
-          suggestions.map((item)=>(
+    <div
+      key={item.id}
+      className="suggestion"
+      onClick={() => setSearch(item.title)}
+    >
 
-            <div
+      <div>
 
-            key={item.id}
+        <small>
+          {item.category.toUpperCase()}
+        </small>
 
-            className="suggestion"
+        <h4>
+          {item.title}
+        </h4>
 
-            onClick={()=>setSearch(item.title)}
+        <p>
+          {item.description}
+        </p>
 
-            >
+      </div>
 
-              <span>
+    </div>
 
-                {item.category}
+  ))}
 
-              </span>
-
-              <strong>
-
-                {item.title}
-
-              </strong>
-
-            </div>
-
-          ))
-
-          }
-
-        </div>
+</div>
 
         }
 
