@@ -1,5 +1,6 @@
 import "../styles/home.css";
 import { motion } from "framer-motion";
+import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 
 import Navbar from "../components/Navbar";
