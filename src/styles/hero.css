@@ -1,52 +1,227 @@
 .hero{
-    max-width: 700px;
-    margin: 70px auto 50px;
-    padding: 0 20px;
-    text-align: center;
+
+max-width:850px;
+
+margin:90px auto 70px;
+
+padding:0 22px;
+
+text-align:center;
+
+position:relative;
+
+}
+
+.heroBadge{
+
+display:inline-flex;
+
+padding:8px 18px;
+
+border-radius:999px;
+
+border:1px solid #28282D;
+
+background:#121214;
+
+font-size:12px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+color:#A1A1AA;
+
+margin-bottom:28px;
+
 }
 
 .hero h1{
-    font-size: 56px;
-    font-weight: 800;
-    color: #FAFAFA;
-    letter-spacing: -2px;
-    margin-bottom: 15px;
+
+font-size:68px;
+
+line-height:1.05;
+
+font-weight:800;
+
+letter-spacing:-3px;
+
+color:white;
+
+margin-bottom:22px;
+
 }
 
 .hero p{
-    color: #A1A1AA;
-    font-size: 18px;
-    line-height: 1.7;
-    margin-bottom: 35px;
+
+max-width:620px;
+
+margin:auto;
+
+color:#A1A1AA;
+
+font-size:18px;
+
+line-height:1.8;
+
+margin-bottom:42px;
+
+}
+
+.hero strong{
+
+color:white;
+
+font-weight:600;
+
 }
 
 .searchWrapper{
-    position: relative;
-    width: 100%;
-}
 
-.searchIcon{
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #71717A;
-    font-size: 18px;
+position:relative;
+
+max-width:720px;
+
+margin:auto;
+
 }
 
 .search{
-    width: 100%;
-    height: 58px;
-    padding-left: 55px;
-    padding-right: 20px;
-    border-radius: 16px;
-    border: 1px solid #27272A;
-    background: #111111;
-    color: white;
-    font-size: 16px;
-    outline: none;
+
+width:100%;
+
+height:66px;
+
+padding-left:60px;
+
+padding-right:22px;
+
+background:#121214;
+
+border:1px solid #252529;
+
+border-radius:18px;
+
+font-size:16px;
+
+color:white;
+
+outline:none;
+
+transition:.3s;
+
 }
 
 .search:focus{
-    border-color: #DC2626;
+
+border-color:#DC2626;
+
+box-shadow:0 0 0 4px rgba(220,38,38,.12);
+
+}
+
+.searchIcon{
+
+position:absolute;
+
+left:22px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+font-size:18px;
+
+color:#71717A;
+
+}
+
+.suggestions{
+
+margin-top:14px;
+
+background:#121214;
+
+border:1px solid #27272A;
+
+border-radius:18px;
+
+overflow:hidden;
+
+backdrop-filter:blur(20px);
+
+}
+
+.suggestion{
+
+padding:16px 20px;
+
+cursor:pointer;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+transition:.2s;
+
+}
+
+.suggestion:hover{
+
+background:#19191D;
+
+}
+
+.suggestion span{
+
+font-size:12px;
+
+letter-spacing:1px;
+
+color:#A1A1AA;
+
+text-transform:uppercase;
+
+}
+
+.suggestion strong{
+
+font-size:15px;
+
+font-weight:600;
+
+color:white;
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+margin-top:60px;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+letter-spacing:-2px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.search{
+
+height:58px;
+
+}
+
 }
