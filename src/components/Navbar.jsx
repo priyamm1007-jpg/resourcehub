@@ -47,7 +47,7 @@ export default function Navbar() {
 
       >
 
-        Instagram ↗
+        Instagram
 
       </a>
 
