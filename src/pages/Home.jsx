@@ -1,4 +1,5 @@
 import "../styles/home.css";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import Navbar from "../components/Navbar";
@@ -97,20 +98,30 @@ export default function Home() {
 
         ) : (
 
-          filteredResources.map((resource) => (
+          filteredResources.map((resource, index) => (
 
-            <ResourceCard
-              key={resource.id}
-              title={resource.title}
-              description={resource.description}
-              category={resource.category}
-              website={resource.website}
-              reel={resource.reel}
-              thumbnail={resource.thumbnail}
-              free={resource.featured}
-            />
+  <motion.div
+    key={resource.id}
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{
+      delay: index * 0.08,
+      duration: 0.45,
+      ease: "easeOut",
+    }}
+  >
+    <ResourceCard
+      title={resource.title}
+      description={resource.description}
+      category={resource.category}
+      website={resource.website}
+      reel={resource.reel}
+      thumbnail={resource.thumbnail}
+      free={resource.featured}
+    />
+  </motion.div>
 
-          ))
+))
 
         )}
 
