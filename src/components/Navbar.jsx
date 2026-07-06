@@ -47,7 +47,7 @@ export default function Navbar() {
 
       >
 
-        MAYURIIIII
+        INSTA
 
       </a>
 
