@@ -74,7 +74,87 @@ const [selectedCategory, setSelectedCategory] = useState("All");
       />
 
       <section className="resourceWrapper">
+<div className="filterBar">
 
+<button
+className={
+selectedCategory==="All"
+?
+"filter activeFilter"
+:
+"filter"
+}
+onClick={()=>setSelectedCategory("All")}
+>
+All
+</button>
+
+<button
+className={
+selectedCategory==="AI"
+?
+"filter activeFilter"
+:
+"filter"
+}
+onClick={()=>setSelectedCategory("AI")}
+>
+AI
+</button>
+
+<button
+className={
+selectedCategory==="Website"
+?
+"filter activeFilter"
+:
+"filter"
+}
+onClick={()=>setSelectedCategory("Website")}
+>
+Websites
+</button>
+
+<button
+className={
+selectedCategory==="Roadmap"
+?
+"filter activeFilter"
+:
+"filter"
+}
+onClick={()=>setSelectedCategory("Roadmap")}
+>
+Roadmaps
+</button>
+
+<button
+className={
+selectedCategory==="Notes"
+?
+"filter activeFilter"
+:
+"filter"
+}
+onClick={()=>setSelectedCategory("Notes")}
+>
+Notes
+</button>
+
+<button
+className={
+selectedCategory==="PDF"
+?
+"filter activeFilter"
+:
+"filter"
+}
+onClick={()=>setSelectedCategory("PDF")}
+>
+PDFs
+</button>
+
+</div>
         <div className="sectionHeader">
 
           <span className="sectionTag">
