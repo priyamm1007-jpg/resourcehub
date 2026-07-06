@@ -1,37 +1,58 @@
 import logo from "../assets/logo.png";
 import "../styles/navbar.css";
+import { motion } from "framer-motion";
 
-export default function Navbar(){
+export default function Navbar() {
 
-return(
+  return (
 
-<nav className="navbar">
+    <motion.nav
 
-<div className="left">
+      className="navbar"
 
-<img src={logo}/>
+      initial={{ y: -40, opacity: 0 }}
 
-<div>
+      animate={{ y: 0, opacity: 1 }}
 
-<h2>ResourceHub</h2>
+      transition={{ duration: .6 }}
 
-<p>by Bits.priyam</p>
+    >
 
-</div>
+      <a href="/" className="left">
 
-</div>
+        <img
+          src={logo}
+          alt="ResourceHub"
+        />
 
-<a
-  href="https://instagram.com/bits.priyam"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="insta"
->
-  Instagram
-</a>
+        <div>
 
-</nav>
+          <h2>ResourceHub</h2>
 
-)
+          <p>by Bits.priyam</p>
+
+        </div>
+
+      </a>
+
+      <a
+
+        href="https://instagram.com/bits.priyam"
+
+        target="_blank"
+
+        rel="noreferrer"
+
+        className="insta"
+
+      >
+
+        Instagram ↗
+
+      </a>
+
+    </motion.nav>
+
+  );
 
 }
