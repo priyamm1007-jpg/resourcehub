@@ -46,16 +46,23 @@ const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filteredResources = resources.filter((resource) => {
 
-    const query = search.toLowerCase();
+  const matchesSearch =
 
-    return (
-      resource.title.toLowerCase().includes(query) ||
-      resource.description.toLowerCase().includes(query) ||
-      resource.category.toLowerCase().includes(query)
-    );
+    resource.title.toLowerCase().includes(search.toLowerCase()) ||
 
-  });
+    resource.description.toLowerCase().includes(search.toLowerCase()) ||
 
+    resource.category.toLowerCase().includes(search.toLowerCase());
+
+  const matchesCategory =
+
+    selectedCategory === "All" ||
+
+    resource.category === selectedCategory;
+
+  return matchesSearch && matchesCategory;
+
+});
   return (
     <>
       <Navbar />
