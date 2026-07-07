@@ -223,7 +223,7 @@ transform:translateY(-2px);
 
 .primaryBtn::after{
 
-content:"↗";
+content:"";
 
 display:inline-block;
 
@@ -243,7 +243,7 @@ translateY(-2px);
 
 .secondaryBtn::after{
 
-content:"→";
+content:"";
 
 display:inline-block;
 
