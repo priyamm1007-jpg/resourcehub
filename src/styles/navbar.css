@@ -12,7 +12,7 @@
     background:rgba(9,9,11,.72);
     backdrop-filter:blur(18px);
 
-    border-bottom:1px solid #202024;
+    border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 .left{
@@ -26,7 +26,7 @@
     width:46px;
     height:46px;
     border-radius:50%;
-    transition:.35s;
+    transition:.35s ease;
 }
 
 .left:hover img{
@@ -40,10 +40,12 @@
 }
 
 .left p{
-    color:#71717A;
+    color:#8A8A92;
     font-size:13px;
     margin-top:3px;
 }
+
+/* ---------------- MENU ---------------- */
 
 .menuWrapper{
     position:relative;
@@ -51,104 +53,101 @@
 
 .menuBtn{
 
-    width:46px;
-    height:46px;
+    width:44px;
+    height:44px;
 
     border:none;
     outline:none;
 
     border-radius:14px;
 
-    background:#16161A;
+    background:#151518;
 
     color:#fff;
 
-    font-size:22px;
+    font-size:30px;
+    line-height:1;
 
     cursor:pointer;
 
-    transition:.3s;
+    transition:.3s ease;
 
-    border:1px solid #2B2B30;
+    border:1px solid #2A2A2F;
 
 }
 
 .menuBtn:hover{
 
-    background:#1E1E23;
+    background:#1B1B20;
 
     border-color:#DC2626;
 
     color:#EF4444;
 
+    transform:translateY(-2px);
+
     box-shadow:
-        0 0 20px rgba(220,38,38,.22);
+        0 0 18px rgba(220,38,38,.22);
 
 }
+
+/* ---------------- FLOATING WINDOW ---------------- */
 
 .profileMenu{
 
     position:absolute;
 
     top:58px;
-
     right:0;
 
     width:290px;
 
-    background:rgba(18,18,20,.78);
-
-    backdrop-filter:blur(22px);
-
-    border:1px solid #2A2A2F;
+    padding:18px;
 
     border-radius:22px;
 
-    padding:18px;
+    background:rgba(18,18,20,.82);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.06);
 
     box-shadow:
-        0 25px 80px rgba(0,0,0,.55),
+        0 20px 60px rgba(0,0,0,.55),
         0 0 35px rgba(220,38,38,.08);
 
-}
-
-.menuHeader{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:14px;
+    overflow:hidden;
 
 }
 
-.menuHeader img{
+.profileMenu::before{
 
-    width:46px;
+    content:"";
 
-    height:46px;
+    position:absolute;
 
-    border-radius:50%;
+    inset:0;
 
-}
+    background:
+    radial-gradient(circle at top right,
+    rgba(220,38,38,.16),
+    transparent 60%);
 
-.menuHeader h3{
-
-    color:white;
-
-    font-size:17px;
-
-    margin-bottom:3px;
+    pointer-events:none;
 
 }
 
-.menuHeader p{
+.profileMenu h4{
 
-    color:#8F8F95;
+    color:#fff;
 
-    font-size:13px;
+    font-size:16px;
 
-    line-height:1.4;
+    margin-bottom:14px;
+
+    position:relative;
+
+    z-index:2;
 
 }
 
@@ -158,52 +157,70 @@
 
     background:#2A2A2F;
 
-    margin:16px 0;
+    margin:12px 0;
 
 }
+
+/* ---------------- LINKS ---------------- */
 
 .profileMenu a{
 
     display:flex;
 
-    align-items:center;
+    justify-content:space-between;
 
-    gap:10px;
+    align-items:center;
 
     text-decoration:none;
 
     color:#ECECEC;
 
-    padding:12px 14px;
+    padding:13px 15px;
 
     border-radius:14px;
 
-    transition:.25s;
-
-    font-size:15px;
-
     margin-bottom:6px;
+
+    transition:.28s ease;
+
+    position:relative;
+
+    z-index:2;
 
 }
 
 .profileMenu a:hover{
 
-    background:#1E1E23;
-
-    color:#fff;
+    background:#1B1B20;
 
     transform:translateX(6px);
 
+    color:#fff;
+
     box-shadow:
-        inset 0 0 0 1px rgba(220,38,38,.25);
+        inset 0 0 0 1px rgba(220,38,38,.20);
 
 }
 
-.profileMenu small{
+.profileMenu a::after{
 
-    color:#71717A;
+    content:"↗";
 
-    margin-left:4px;
+    opacity:0;
+
+    transform:translateX(-6px);
+
+    transition:.25s;
+
+    color:#EF4444;
+
+}
+
+.profileMenu a:hover::after{
+
+    opacity:1;
+
+    transform:translateX(0);
 
 }
 
@@ -213,13 +230,19 @@
 
     text-align:center;
 
-    color:#666;
+    color:#6E6E75;
 
     font-size:12px;
 
-    margin-top:4px;
+    margin-top:8px;
+
+    position:relative;
+
+    z-index:2;
 
 }
+
+/* ---------------- MOBILE ---------------- */
 
 @media(max-width:768px){
 
@@ -243,7 +266,7 @@
 
     .profileMenu{
 
-        width:260px;
+        width:250px;
 
         right:-6px;
 
