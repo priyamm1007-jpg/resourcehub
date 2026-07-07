@@ -6,35 +6,28 @@ import "../styles/navbar.css";
 export default function Navbar() {
 
   const [open, setOpen] = useState(false);
-
   const menuRef = useRef(null);
 
   useEffect(() => {
 
     function handleClick(e) {
-
       if (menuRef.current && !menuRef.current.contains(e.target)) {
         setOpen(false);
       }
-
     }
 
     function handleEsc(e) {
-
       if (e.key === "Escape") {
         setOpen(false);
       }
-
     }
 
     document.addEventListener("mousedown", handleClick);
     document.addEventListener("keydown", handleEsc);
 
     return () => {
-
       document.removeEventListener("mousedown", handleClick);
       document.removeEventListener("keydown", handleEsc);
-
     };
 
   }, []);
@@ -42,15 +35,10 @@ export default function Navbar() {
   return (
 
     <motion.nav
-
       className="navbar"
-
       initial={{ y: -40, opacity: 0 }}
-
       animate={{ y: 0, opacity: 1 }}
-
       transition={{ duration: .6 }}
-
     >
 
       <a href="/" className="left">
@@ -76,14 +64,12 @@ export default function Navbar() {
       >
 
         <button
-
           className="menuBtn"
-
           onClick={() => setOpen(!open)}
-
+          aria-label="Open Menu"
         >
 
-          ☰
+          ⋯
 
         </button>
 
@@ -97,7 +83,7 @@ export default function Navbar() {
 
               initial={{
                 opacity:0,
-                y:-12,
+                y:-10,
                 scale:.96
               }}
 
@@ -119,22 +105,7 @@ export default function Navbar() {
 
             >
 
-              <div className="menuHeader">
-
-                <img
-                  src={logo}
-                  alt="logo"
-                />
-
-                <div>
-
-                  <h3>Bits.priyam</h3>
-
-                  <p>Building useful internet tools.</p>
-
-                </div>
-
-              </div>
+              <h4>Connect</h4>
 
               <div className="divider"></div>
 
@@ -159,13 +130,13 @@ export default function Navbar() {
               </a>
 
               <a href="#">
-                🤖 Reverse Hunt <small>(Soon)</small>
+                ▶ YouTube
               </a>
 
               <div className="divider"></div>
 
               <span className="version">
-                ResourceHub v1.0
+                More profiles coming soon...
               </span>
 
             </motion.div>
