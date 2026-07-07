@@ -1,41 +1,31 @@
-.featuredSection{
+.featuredSection {
+  width: 90%;
 
-    width:90%;
+  max-width: 1300px;
 
-    max-width:1300px;
-
-    margin:70px auto;
-
+  margin: 70px auto;
 }
 
-.sectionHeader{
-
-    margin-bottom:35px;
-
+.sectionHeader {
+  margin-bottom: 35px;
 }
 
-.sectionHeader h2{
+.sectionHeader h2 {
+  font-size: 40px;
 
-    font-size:40px;
-
-    color:#FAFAFA;
-
+  color: #fafafa;
 }
 
-.sectionHeader p{
+.sectionHeader p {
+  margin-top: 8px;
 
-    margin-top:8px;
-
-    color:#A1A1AA;
-
+  color: #a1a1aa;
 }
 
-.featuredGrid{
+.featuredGrid {
+  display: grid;
 
-    display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
 
-    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-
-    gap:25px;
-
+  gap: 25px;
 }

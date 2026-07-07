@@ -157,9 +157,7 @@ PDFs
 </div>
         <div className="sectionHeader">
 
-          <span className="sectionTag">
-            EXPLORE
-          </span>
+          
 
           <h2 className="sectionTitle">
             Useful Resources
