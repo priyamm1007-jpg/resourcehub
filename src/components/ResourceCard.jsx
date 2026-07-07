@@ -52,7 +52,7 @@ export default function ResourceCard({
           rel="noreferrer"
           className="secondaryBtn"
         >
-          Watch Reel →
+          Watch Reel 
         </a>
 
       </div>
